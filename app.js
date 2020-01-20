@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 const app = express();
 // connected to mlab database
-mongoose.connect('mongodb://ninja:test@ds161148.mlab.com:61148/graphql-ninja')
+mongoose.connect('mongodb://localhost/test', {useNewUrlParser: true})
 mongoose.connection.once('open', () => {
     console.log('conneted to database');
 });
